@@ -1,0 +1,98 @@
+.cards-container, .cards-container .cards-main, .cards-container .card-component {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.cards-container .card-component:nth-child(2)::before {
+  position: absolute;
+  top: -2rem;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: hsl(257, 27%, 26%);
+  background-image: url(../images/icon-brand-recognition.svg);
+  background-repeat: no-repeat;
+  background-position: 0.9rem 0.8rem;
+}
+
+.cards-container .card-component:nth-child(3)::before {
+  position: absolute;
+  top: -2rem;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: hsl(257, 27%, 26%);
+  background-image: url(../images/icon-detailed-records.svg);
+  background-repeat: no-repeat;
+  background-position: 0.9rem 0.9rem;
+}
+
+.cards-container .card-component:nth-child(4)::before {
+  position: absolute;
+  top: -2rem;
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+  background-color: hsl(257, 27%, 26%);
+  background-image: url(../images/icon-fully-customizable.svg);
+  background-repeat: no-repeat;
+  background-position: 0.8rem 0.9rem;
+}
+
+.cards-container .card-component:nth-child(2):after, .cards-container .card-component:nth-child(3):after {
+  z-index: 1;
+  position: absolute;
+  bottom: -3rem;
+  content: "";
+  width: 0.5rem;
+  height: 3rem;
+  background-color: hsl(180, 66%, 49%);
+}
+
+.cards-container {
+  width: 100vw;
+  z-index: 3;
+}
+.cards-container .cards-main {
+  margin-bottom: 4rem;
+  z-index: 3;
+}
+.cards-container .cards-main .main-title {
+  font-weight: 700;
+  font-size: 32px;
+  width: 300px;
+  margin-bottom: 1rem;
+}
+.cards-container .cards-main .main-text {
+  width: 300px;
+  color: hsl(257, 7%, 63%);
+  font-size: 17px;
+}
+.cards-container .card-component {
+  z-index: 3;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+  width: 325px;
+  height: 260px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.6rem;
+  margin-bottom: 5rem;
+}
+.cards-container .card-component .card-title {
+  width: 300px;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 22px;
+}
+.cards-container .card-component .card-text {
+  width: 300px;
+  color: hsl(257, 7%, 63%);
+  font-size: 17px;
+  line-height: 1.4rem;
+}/*# sourceMappingURL=Cards.css.map */

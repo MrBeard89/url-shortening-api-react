@@ -1,0 +1,44 @@
+@use '../../sass/variables' as v;
+@forward '../../sass/templates';
+
+.header-main {
+  @extend %flex-column;
+  height: 100vh;
+
+  .header-text {
+    @extend %ai-center-column;
+    text-align: center;
+    gap: v.$text-gap;
+
+    h1 {
+      font-weight: 700;
+      font-size: 40px;
+      width: 300px;
+      line-height: v.$line-height;
+    }
+
+    p {
+      width: v.$content-width-mobile;
+      color: v.$grayish-violet;
+    }
+
+    button {
+      @extend %btn;
+
+      &:hover {
+        @extend %btn-hover;
+      }
+    }
+  }
+
+  .header-img-container {
+    @extend %flex-justify-c;
+    width: v.$max-width;
+    margin-bottom: 2rem;
+
+    .header-img {
+      width: 375px;
+      height: 350px;
+    }
+  }
+}

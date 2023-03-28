@@ -1,0 +1,29 @@
+@forward '../../sass/templates';
+@use '../../sass/variables' as v;
+
+.boost-wrapper {
+  @extend %full-center-column;
+  gap: 1.3rem;
+  height: 260px;
+  background-color: v.$dark-violet;
+
+  background-image: url('../../images/bg-boost-mobile.svg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 0rem -1.3rem;
+
+  .boost-title {
+    width: v.$overal-width-mobile;
+    text-align: center;
+    color: v.$soft-white;
+    font-size: 25px;
+  }
+
+  button {
+    @extend %btn;
+
+    &:hover {
+      @extend %btn-hover;
+    }
+  }
+}

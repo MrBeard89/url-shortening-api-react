@@ -1,0 +1,56 @@
+.header-main .header-text {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header-main {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-main .header-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+.header-main .header-text button {
+  background-color: hsl(180, 66%, 49%);
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 85%);
+  border-radius: 2rem;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+}
+
+.header-main .header-text button:hover {
+  background-color: hsl(0, 0%, 85%);
+  cursor: pointer;
+}
+
+.header-main {
+  height: 100vh;
+}
+.header-main .header-text {
+  text-align: center;
+  gap: 1.5rem;
+}
+.header-main .header-text h1 {
+  font-weight: 700;
+  font-size: 40px;
+  width: 300px;
+  line-height: 2.2rem;
+}
+.header-main .header-text p {
+  width: 325px;
+  color: hsl(257, 7%, 63%);
+}
+.header-main .header-img-container {
+  width: 100vw;
+  margin-bottom: 2rem;
+}
+.header-main .header-img-container .header-img {
+  width: 375px;
+  height: 350px;
+}/*# sourceMappingURL=Header.css.map */

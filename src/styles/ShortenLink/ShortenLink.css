@@ -1,0 +1,146 @@
+.shortenlink-wrapper, .shortenlink-wrapper .shortenlink-container .shortenlink-actual, .shortenlink-wrapper .shortenlink-container .shortenlink-actual .shortenlink-form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.shortenlink-wrapper .shortenlink-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.shortenlink-wrapper .shortenlink-container .shortenlink-actual .btn-shorten {
+  background-color: hsl(180, 66%, 49%);
+  color: hsl(0, 0%, 100%);
+  border: 2px solid hsl(0, 0%, 10%);
+  border-radius: 0.5rem;
+  font-size: 22px;
+  font-weight: 500;
+  padding: 0.5rem 4.5rem;
+}
+
+.shortenlink-wrapper .shortened-container button {
+  background-color: hsl(180, 66%, 49%);
+  color: hsl(0, 0%, 100%);
+  border: 1px solid hsl(0, 0%, 85%);
+  border-radius: 0.5rem;
+  font-size: 18px;
+  font-weight: 700;
+  padding: 0.3rem 3.3rem;
+  width: 300px;
+  outline: none;
+}
+
+.shortenlink-wrapper .shortenlink-container .shortenlink-actual .btn-shorten:hover, .shortenlink-wrapper .shortened-container button:hover {
+  background-color: hsl(0, 0%, 85%);
+  cursor: pointer;
+}
+
+.underline-wrapper {
+  position: relative;
+  z-index: 1;
+}
+.underline-wrapper .underline-div {
+  position: absolute;
+  top: 5rem;
+  right: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: hsl(252, 100%, 98%);
+}
+
+.shortenlink-wrapper {
+  width: 100vw;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin-bottom: 2rem;
+  z-index: 3;
+}
+.shortenlink-wrapper .shortenlink-container {
+  z-index: 3;
+  width: 325px;
+  height: 180px;
+  background-color: hsl(257, 27%, 26%);
+  border-radius: 0.7rem;
+  background-image: url("../../images/bg-shorten-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: 5.2rem 0rem;
+}
+.shortenlink-wrapper .shortenlink-container .shortenlink-actual {
+  position: relative;
+}
+.shortenlink-wrapper .shortenlink-container .shortenlink-actual .shortenlink-form {
+  gap: 0.5rem;
+}
+.shortenlink-wrapper .shortenlink-container .shortenlink-actual input {
+  width: 258px;
+  height: 2.85rem;
+  border-radius: 0.5rem;
+  border: 2px solid hsl(0, 0%, 10%);
+  outline: none;
+  padding-left: 1rem;
+}
+.shortenlink-wrapper .shortenlink-container .shortenlink-actual input:focus-visible {
+  border: 2px solid hsl(180, 66%, 49%);
+}
+.shortenlink-wrapper .shortened-container {
+  z-index: inherit;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 1.5rem;
+  width: 325px;
+  height: 180px;
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.7rem;
+}
+.shortenlink-wrapper .shortened-container .original-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 3rem;
+  width: 300px;
+  padding-left: 1rem;
+  color: hsl(257, 27%, 26%);
+  font-weight: 700;
+  overflow: scroll;
+}
+.shortenlink-wrapper .shortened-container .shortened-line {
+  width: 325px;
+  outline: none;
+  border: none;
+  height: 1px;
+  background-color: hsl(180, 66%, 49%);
+}
+.shortenlink-wrapper .shortened-container .shortened-link {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 3rem;
+  width: 300px;
+  padding-left: 1rem;
+  color: hsl(180, 66%, 49%);
+  font-weight: 500;
+  overflow: scroll;
+}
+.shortenlink-wrapper .shortened-container button {
+  margin-left: 0.7rem;
+}
+.shortenlink-wrapper .shortened-container button:is(:focus-visible, :active) {
+  background-color: hsl(257, 27%, 26%);
+  transition: ease-in-out 8ms;
+}
+
+.error-label {
+  display: none;
+  position: relative;
+  height: 0.5rem;
+  left: -4.3rem;
+  top: -0.5rem;
+  font-size: 14px;
+  color: hsl(0, 87%, 67%);
+  border: none;
+}/*# sourceMappingURL=ShortenLink.css.map */

@@ -1,0 +1,135 @@
+@use '../../sass/variables' as v;
+@forward '../../sass/templates';
+
+.underline-wrapper {
+  position: relative;
+  z-index: 1;
+  .underline-div {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    background-color: v.$soft-blue;
+  }
+}
+.shortenlink-wrapper {
+  width: v.$max-width;
+  height: fit-content;
+  @extend %ai-center-column;
+  margin-bottom: 2rem;
+  z-index: 3;
+
+  .shortenlink-container {
+    z-index: 3;
+    width: v.$content-width-mobile;
+    height: 180px;
+    @extend %full-center-column;
+    background-color: v.$dark-violet;
+    border-radius: 0.7rem;
+    background-image: url('../../images/bg-shorten-mobile.svg');
+    background-repeat: no-repeat;
+    background-position: 5.2rem 0rem;
+
+    .shortenlink-actual {
+      position: relative;
+      @extend %ai-center-column;
+
+      .shortenlink-form {
+        @extend %ai-center-column;
+        gap: 0.5rem;
+      }
+      input {
+        width: 258px;
+        height: 2.85rem;
+        border-radius: 0.5rem;
+        border: 2px solid v.$black;
+        outline: none;
+        padding-left: 1rem;
+
+        &:focus-visible {
+          border: 2px solid v.$cyan;
+        }
+      }
+
+      .btn-shorten {
+        @extend %btn-shorten;
+
+        &:hover {
+          @extend %btn-hover;
+        }
+      }
+    }
+  }
+  .shortened-container {
+    z-index: inherit;
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+    width: v.$content-width-mobile;
+    height: 180px;
+    background-color: v.$soft-white;
+    border-radius: 0.7rem;
+
+    .original-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 3rem;
+      width: 300px;
+      padding-left: 1rem;
+      color: v.$dark-violet;
+      font-weight: 700;
+      overflow: scroll;
+    }
+
+    .shortened-line {
+      width: v.$content-width-mobile;
+      outline: none;
+      border: none;
+      height: 1px;
+      background-color: v.$cyan;
+    }
+
+    .shortened-link {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 3rem;
+      width: 300px;
+      padding-left: 1rem;
+      color: v.$cyan;
+      font-weight: 500;
+      overflow: scroll;
+    }
+
+    button {
+      @extend %btn-copy;
+      margin-left: 0.7rem;
+
+      &:hover {
+        @extend %btn-hover;
+      }
+
+      &:is(:focus-visible, :active) {
+        background-color: v.$dark-violet;
+        transition: ease-in-out 8ms;
+      }
+    }
+  }
+}
+
+// Input Error handling
+
+.error-label {
+  display: none;
+  position: relative;
+  height: 0.5rem;
+  left: -4.3rem;
+  top: -0.5rem;
+  font-size: 14px;
+  color: v.$red;
+  border: none;
+}

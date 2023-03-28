@@ -1,0 +1,153 @@
+@use './variables' as v;
+
+////////////// Flexbox - Column //////////////
+///
+///
+//Flex:Align items center with column
+%ai-center-column {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+//Flex:Justify center with column
+%jc-center-column {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+//Flex:full center column
+%full-center-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+//Flex:column only
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+//Flex:justify center only
+%flex-justify-c {
+  display: flex;
+  justify-content: center;
+}
+//Flex:align-items center only
+%flex-align-c {
+  display: flex;
+  align-items: center;
+}
+
+////////////// Flexbox - Row //////////////
+
+//Flex:justify center with Row
+%jc-center-row {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+//Flex:row only
+%flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+////////////// Buttons  //////////////
+
+%btn {
+  background-color: v.$cyan;
+  color: v.$soft-white;
+  border: 1px solid v.$gray;
+  border-radius: 2rem;
+  font-size: 22px;
+  font-weight: v.$font-weight-500;
+  padding: 0.5rem 1.5rem;
+}
+
+%btn-shorten {
+  background-color: v.$cyan;
+  color: v.$soft-white;
+  border: 2px solid v.$black;
+  border-radius: 0.5rem;
+  font-size: 22px;
+  font-weight: v.$font-weight-500;
+  padding: 0.5rem 4.5rem;
+}
+
+%btn-copy {
+  background-color: v.$cyan;
+  color: v.$soft-white;
+  border: 1px solid v.$gray;
+  border-radius: 0.5rem;
+  font-size: 18px;
+  font-weight: v.$font-weight-700;
+  padding: 0.3rem 3.3rem;
+  width: 300px;
+  outline: none;
+}
+
+%btn-hover {
+  background-color: v.$gray;
+  cursor: pointer;
+}
+
+////////////// Statics Section: Card images  //////////////
+
+%card-img-brand {
+  &::before {
+    position: absolute;
+    top: -2rem;
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$dark-violet;
+    background-image: url(../images/icon-brand-recognition.svg);
+    background-repeat: no-repeat;
+    background-position: 0.9rem 0.8rem;
+  }
+}
+
+%card-img-records {
+  &::before {
+    position: absolute;
+    top: -2rem;
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$dark-violet;
+    background-image: url(../images/icon-detailed-records.svg);
+    background-repeat: no-repeat;
+    background-position: 0.9rem 0.9rem;
+  }
+}
+
+%card-img-custom {
+  &::before {
+    position: absolute;
+    top: -2rem;
+    content: '';
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    background-color: v.$dark-violet;
+    background-image: url(../images/icon-fully-customizable.svg);
+    background-repeat: no-repeat;
+    background-position: 0.8rem 0.9rem;
+  }
+}
+
+////////////// Statics Section: Card Line  //////////////
+
+%between-card-line {
+  &:after {
+    z-index: 1;
+    position: absolute;
+    bottom: -3rem;
+    content: '';
+    width: 0.5rem;
+    height: 3rem;
+    background-color: v.$cyan;
+  }
+}

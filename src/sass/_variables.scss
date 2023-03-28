@@ -1,0 +1,38 @@
+////////////// Colors //////////////
+
+////Primary
+
+$black: hsl(0, 0%, 10%);
+$cyan: hsl(180, 66%, 49%);
+$dark-violet: hsl(257, 27%, 26%);
+
+////Secondary
+
+$red: hsl(0, 87%, 67%);
+
+////Neutral
+
+$gray: hsl(0, 0%, 85%);
+$soft-white: hsl(0, 0%, 100%);
+$soft-blue: hsl(252, 100%, 98%);
+$grayish-violet: hsl(257, 7%, 63%);
+$very-dark-blue: hsl(255, 11%, 22%);
+$very-dark-violet: hsl(260, 8%, 14%);
+
+////////////// Font //////////////
+
+$font-family: 'Poppins', sans-serif;
+$font-weight-500: 500;
+$font-weight-700: 700;
+$font-size: 18px;
+$text-gap: 1.5rem;
+$line-height: 2.2rem;
+
+////////////// Variables //////////////
+
+$content-width-mobile: 325px;
+$staticstext-width-mobile: 300px;
+$overal-width-mobile: 300px;
+
+$content-width-desktop: 1340px;
+$max-width: 100vw;

@@ -1,0 +1,73 @@
+@use '../../sass/variables' as v;
+@forward '../../sass/templates';
+
+.cards-container {
+  @extend %full-center-column;
+  width: v.$max-width;
+  z-index: 3;
+
+  .cards-main {
+    @extend %full-center-column;
+    margin-bottom: 4rem;
+    z-index: 3;
+
+    .main-title {
+      font-weight: v.$font-weight-700;
+      font-size: 32px;
+      width: v.$staticstext-width-mobile;
+      margin-bottom: 1rem;
+    }
+
+    .main-text {
+      width: v.$staticstext-width-mobile;
+      color: v.$grayish-violet;
+      font-size: 17px;
+    }
+  }
+
+  .card-component {
+    //Card image brand
+    z-index: 3;
+    &:nth-child(2) {
+      @extend %card-img-brand;
+      @extend %between-card-line;
+    }
+
+    //Card image records
+
+    &:nth-child(3) {
+      @extend %card-img-records;
+      @extend %between-card-line;
+    }
+
+    //Card image custom
+
+    &:nth-child(4) {
+      @extend %card-img-custom;
+    }
+
+    position: relative;
+    @extend %full-center-column;
+    z-index: 3;
+    text-align: center;
+    width: v.$content-width-mobile;
+    height: 260px;
+    background-color: v.$soft-white;
+    border-radius: 0.6rem;
+    margin-bottom: 5rem;
+
+    .card-title {
+      width: v.$staticstext-width-mobile;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      font-size: 22px;
+    }
+
+    .card-text {
+      width: v.$staticstext-width-mobile;
+      color: v.$grayish-violet;
+      font-size: 17px;
+      line-height: 1.4rem;
+    }
+  }
+}

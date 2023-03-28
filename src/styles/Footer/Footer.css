@@ -1,0 +1,50 @@
+.footer-wrapper .footer-container, .footer-wrapper .links-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-wrapper {
+  background-color: hsl(260, 8%, 14%);
+}
+.footer-wrapper .footer-container .logo {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+.footer-wrapper .links-container {
+  text-align: center;
+  gap: 2rem;
+  margin-bottom: 2.2rem;
+}
+.footer-wrapper .links-container h3 {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 1.3rem;
+  font-size: 16px;
+}
+.footer-wrapper .links-container .links {
+  list-style: none;
+  line-height: 2rem;
+}
+.footer-wrapper .links-container .links a {
+  text-decoration: none;
+  color: hsl(257, 7%, 63%);
+}
+.footer-wrapper .links-container .links a:hover {
+  text-decoration: underline;
+}
+.footer-wrapper .links-container .links li {
+  font-weight: 500;
+  font-size: 16px;
+}
+.footer-wrapper .footer-social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+.footer-wrapper .footer-social-icons .icons {
+  color: white;
+  font-size: 1.3rem;
+}
+.footer-wrapper .footer-social-icons .icons:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=Footer.css.map */

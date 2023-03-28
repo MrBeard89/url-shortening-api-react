@@ -1,0 +1,8 @@
+@use '../../sass/variables' as v;
+
+.statics {
+  z-index: 3 !important;
+  background-color: v.$soft-blue;
+  margin-top: 6rem;
+  text-align: center;
+}
