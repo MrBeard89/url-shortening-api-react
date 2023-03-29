@@ -15,14 +15,16 @@ export const Cards = () => {
 
         {/* Mapping throw Text.json */}
 
-        {Text.map((card, index) => {
-          return (
-            <div className='card-component' key={index}>
-              <h1 className='card-title'>{card.title}</h1>
-              <p className='card-text'>{card.text}</p>
-            </div>
-          )
-        })}
+        <div className='card-wrapper'>
+          {Text.map((card, index) => {
+            return (
+              <div className='card-component' key={index}>
+                <h1 className='card-title'>{card.title}</h1>
+                <p className='card-text'>{card.text}</p>
+              </div>
+            )
+          })}
+        </div>
       </div>
     </>
   )

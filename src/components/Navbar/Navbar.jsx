@@ -35,7 +35,7 @@ export const Navbar = () => {
 
           {/* Navbar-mobile show depend on State */}
 
-          <div className={`navbar navbar-mobile${navbarOpen ? ' show-menu' : ''}`}>
+          <div className={`navbar${navbarOpen ? ' show-menu' : ''}`}>
             {/* Navbar Links */}
 
             <ul className='links'>

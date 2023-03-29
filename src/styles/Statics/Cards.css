@@ -1,11 +1,11 @@
-.cards-container, .cards-container .cards-main, .cards-container .card-component {
+.cards-container, .cards-container .cards-main, .cards-container .card-wrapper .card-component {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.cards-container .card-component:nth-child(2)::before {
+.cards-container .card-wrapper .card-component:nth-child(1)::before {
   position: absolute;
   top: -2rem;
   content: "";
@@ -18,7 +18,7 @@
   background-position: 0.9rem 0.8rem;
 }
 
-.cards-container .card-component:nth-child(3)::before {
+.cards-container .card-wrapper .card-component:nth-child(2)::before {
   position: absolute;
   top: -2rem;
   content: "";
@@ -31,7 +31,7 @@
   background-position: 0.9rem 0.9rem;
 }
 
-.cards-container .card-component:nth-child(4)::before {
+.cards-container .card-wrapper .card-component:nth-child(3)::before {
   position: absolute;
   top: -2rem;
   content: "";
@@ -42,16 +42,6 @@
   background-image: url(../images/icon-fully-customizable.svg);
   background-repeat: no-repeat;
   background-position: 0.8rem 0.9rem;
-}
-
-.cards-container .card-component:nth-child(2):after, .cards-container .card-component:nth-child(3):after {
-  z-index: 1;
-  position: absolute;
-  bottom: -3rem;
-  content: "";
-  width: 0.5rem;
-  height: 3rem;
-  background-color: hsl(180, 66%, 49%);
 }
 
 .cards-container {
@@ -73,8 +63,12 @@
   color: hsl(257, 7%, 63%);
   font-size: 17px;
 }
-.cards-container .card-component {
-  z-index: 3;
+.cards-container .card-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.cards-container .card-wrapper .card-component {
+  z-index: 4;
   position: relative;
   z-index: 3;
   text-align: center;
@@ -84,15 +78,80 @@
   border-radius: 0.6rem;
   margin-bottom: 5rem;
 }
-.cards-container .card-component .card-title {
+.cards-container .card-wrapper .card-component:nth-child(1):after {
+  z-index: 1;
+  position: absolute;
+  bottom: -3rem;
+  content: "";
+  width: 0.5rem;
+  height: 3rem;
+  background-color: hsl(180, 66%, 49%);
+}
+.cards-container .card-wrapper .card-component:nth-child(2):after {
+  z-index: 1;
+  position: absolute;
+  bottom: -3rem;
+  content: "";
+  width: 0.5rem;
+  height: 3rem;
+  background-color: hsl(180, 66%, 49%);
+}
+.cards-container .card-wrapper .card-component .card-title {
   width: 300px;
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 22px;
 }
-.cards-container .card-component .card-text {
+.cards-container .card-wrapper .card-component .card-text {
   width: 300px;
   color: hsl(257, 7%, 63%);
   font-size: 17px;
   line-height: 1.4rem;
+}
+
+@media only screen and (min-width: 1440px) {
+  .cards-container .main-text {
+    width: 500px !important;
+    margin-bottom: 3.5rem;
+  }
+  .card-wrapper {
+    flex-direction: row !important;
+    gap: 2rem;
+  }
+  .card-wrapper .card-component {
+    text-align: left !important;
+    padding-left: 1rem !important;
+  }
+  .card-wrapper .card-component:is(:nth-child(1), :nth-child(2))::after {
+    content: none !important;
+  }
+  .card-wrapper .card-component:is(:nth-child(1), :nth-child(2), :nth-child(3))::before {
+    left: 2rem;
+  }
+  .card-wrapper .card-component:nth-child(2) {
+    margin-top: 2.5rem;
+  }
+  .card-wrapper .card-component:nth-child(2)::after {
+    position: absolute !important;
+    left: -2rem !important;
+    top: 5rem;
+    z-index: 1 !important;
+    content: "" !important;
+    width: 2rem !important;
+    height: 0.5rem !important;
+    background-color: hsl(180, 66%, 49%) !important;
+  }
+  .card-wrapper .card-component:nth-child(3) {
+    margin-top: 4.5rem;
+  }
+  .card-wrapper .card-component:nth-child(3)::after {
+    position: absolute !important;
+    left: -2rem !important;
+    top: 3rem;
+    z-index: 1 !important;
+    content: "" !important;
+    width: 2rem !important;
+    height: 0.5rem !important;
+    background-color: hsl(180, 66%, 49%) !important;
+  }
 }/*# sourceMappingURL=Cards.css.map */

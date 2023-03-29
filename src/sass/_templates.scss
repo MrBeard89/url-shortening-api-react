@@ -137,17 +137,3 @@
     background-position: 0.8rem 0.9rem;
   }
 }
-
-////////////// Statics Section: Card Line  //////////////
-
-%between-card-line {
-  &:after {
-    z-index: 1;
-    position: absolute;
-    bottom: -3rem;
-    content: '';
-    width: 0.5rem;
-    height: 3rem;
-    background-color: v.$cyan;
-  }
-}

@@ -2,6 +2,7 @@
 @use '../../sass/variables' as v;
 
 .boost-wrapper {
+  z-index: 4 !important;
   @extend %full-center-column;
   gap: 1.3rem;
   height: 260px;
@@ -25,5 +26,17 @@
     &:hover {
       @extend %btn-hover;
     }
+  }
+}
+
+//Media Queries
+
+@media only screen and (min-width: 1440px) {
+  .boost-wrapper {
+    z-index: 4 !important;
+    background-image: url('../../images/bg-boost-desktop.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 0rem 0rem;
   }
 }

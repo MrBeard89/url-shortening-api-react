@@ -5,7 +5,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  font-weight: 700;
+  font-weight: v.$font-weight-700;
   text-align: center;
 
   .header-logo-container {
@@ -17,6 +17,8 @@
     }
   }
 
+  //Mobile menu Icons
+
   #burgermenu,
   #closemenu {
     position: absolute;
@@ -26,9 +28,13 @@
     font-size: 35px;
   }
 
-  .navbar-mobile {
+  //Mobile Menu
+
+  .navbar {
     display: none;
   }
+
+  //When hamburger clicked , show Mobile menu
 
   .show-menu {
     display: flex;
@@ -53,9 +59,10 @@
     }
   }
 
+  //Mobile menu links
+
   .links {
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     gap: 1rem;
     list-style: none;
     a {
@@ -68,9 +75,10 @@
     }
   }
 
+  //Login Menu section
+
   .login {
-    display: flex;
-    flex-direction: column;
+    @extend %flex-column;
     gap: 1rem;
 
     list-style: none;
@@ -87,11 +95,83 @@
       @extend %btn;
       padding: 0.3rem 1.5rem;
       width: 280px !important;
-      font-weight: 700;
+      font-weight: v.$font-weight-700;
 
       &:hover {
         @extend %btn-hover;
       }
     }
+  }
+}
+
+//Media Queries
+
+@media only screen and (min-width: 1440px) {
+  //Mobile menu Off
+
+  #burgermenu,
+  #closemenu,
+  .show-menu {
+    display: none;
+  }
+
+  // Desktop Menu
+
+  .navbar {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 28rem !important ;
+
+    .links {
+      position: absolute;
+      left: 21vw;
+      display: flex;
+      flex-direction: row !important;
+      margin-top: 1rem;
+      a {
+        color: v.$cyan !important;
+
+        &:hover {
+          text-decoration: none !important;
+          color: v.$dark-violet !important;
+        }
+      }
+    }
+
+    .login {
+      display: flex;
+      flex-direction: row !important;
+      align-items: center !important;
+      margin-right: 11vw !important;
+      margin-top: 1rem;
+      gap: 2rem !important;
+
+      a {
+        color: v.$cyan !important;
+
+        &:hover {
+          text-decoration: none !important;
+          color: v.$dark-violet !important;
+        }
+      }
+
+      .signup-btn {
+        padding: 0.3rem 0.5rem !important;
+        width: 150px !important;
+        font-weight: 700;
+      }
+    }
+
+    //Navbar mobile line off
+
+    .navbar-line-mobile {
+      display: none !important;
+    }
+  }
+
+  .header-logo-container {
+    margin-left: 11vw !important;
   }
 }

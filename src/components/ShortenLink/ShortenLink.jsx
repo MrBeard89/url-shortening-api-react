@@ -67,23 +67,25 @@ export const ShortenLink = () => {
         <div className='shortenlink-container'>
           <div className='shortenlink-actual'>
             <div className='shortenlink-form'>
-              <input
-                style={{ border: actualInput.length === 0 ? '2px solid red' : '' }}
-                name='shorten-link'
-                type='text'
-                placeholder='Shorten a link here ...'
-                value={actualInput}
-                onChange={(e) => {
-                  setActualInput(e.target.value)
-                }}
-              />
-              <label
-                className='error-label'
-                style={{ display: actualInput.length === 0 ? 'block' : '' }}
-                htmlFor='shorten-link'
-              >
-                Please add a link
-              </label>
+              <div className='form-wrapper'>
+                <input
+                  style={{ border: actualInput.length === 0 ? '2px solid red' : '' }}
+                  name='shorten-link'
+                  type='text'
+                  placeholder='Shorten a link here ...'
+                  value={actualInput}
+                  onChange={(e) => {
+                    setActualInput(e.target.value)
+                  }}
+                />
+                <label
+                  className='error-label'
+                  style={{ display: actualInput.length === 0 ? 'block' : '' }}
+                  htmlFor='shorten-link'
+                >
+                  Please add a link
+                </label>
+              </div>
               <button onClick={() => fetchData()} className='btn-shorten'>
                 Shorten it!
               </button>

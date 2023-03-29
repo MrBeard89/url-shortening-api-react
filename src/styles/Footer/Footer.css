@@ -47,4 +47,32 @@
 }
 .footer-wrapper .footer-social-icons .icons:hover {
   cursor: pointer;
+}
+
+@media only screen and (min-width: 1440px) {
+  .footer-container {
+    position: relative;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: flex-start !important;
+    gap: 8rem;
+    padding-top: 5rem;
+    height: 350px;
+  }
+  .footer-container .logo {
+    margin-top: 0 !important;
+    margin-right: 8rem;
+  }
+  .footer-container .links-container {
+    flex-direction: row !important;
+    justify-content: flex-start !important;
+    align-items: flex-start !important;
+    text-align: left;
+    gap: 5rem !important;
+  }
+  .footer-container .szigno {
+    position: absolute;
+    right: 2.4rem;
+    bottom: 2rem;
+  }
 }/*# sourceMappingURL=Footer.css.map */

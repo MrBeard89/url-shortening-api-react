@@ -96,7 +96,9 @@ export const Footer = () => {
           </div>
 
           {/* Szigno */}
-          <h3 style={{ color: 'lightgray' }}>Coded by: Norbert Kovacs</h3>
+          <h3 className='szigno' style={{ color: 'lightgray' }}>
+            Coded by: Norbert Kovacs
+          </h3>
         </div>
       </div>
     </>

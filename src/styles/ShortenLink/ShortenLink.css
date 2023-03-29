@@ -1,4 +1,4 @@
-.shortenlink-wrapper, .shortenlink-wrapper .shortenlink-container .shortenlink-actual, .shortenlink-wrapper .shortenlink-container .shortenlink-actual .shortenlink-form {
+.shortenlink-wrapper, .shortenlink-wrapper .shortenlink-container .shortenlink-actual, .shortenlink-wrapper .shortenlink-container .shortenlink-actual .shortenlink-form, .shortenlink-wrapper .shortenlink-container .shortenlink-actual .shortenlink-form .form-wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -40,13 +40,12 @@
 
 .underline-wrapper {
   position: relative;
-  z-index: 1;
+  z-index: -1 !important;
 }
 .underline-wrapper .underline-div {
   position: absolute;
   top: 5rem;
   right: 0;
-  z-index: 1;
   width: 100vw;
   height: 100vh;
   background-color: hsl(252, 100%, 98%);
@@ -75,7 +74,10 @@
 .shortenlink-wrapper .shortenlink-container .shortenlink-actual .shortenlink-form {
   gap: 0.5rem;
 }
-.shortenlink-wrapper .shortenlink-container .shortenlink-actual input {
+.shortenlink-wrapper .shortenlink-container .shortenlink-actual .shortenlink-form .form-wrapper {
+  gap: 0.5rem;
+}
+.shortenlink-wrapper .shortenlink-container .shortenlink-actual .shortenlink-form .form-wrapper input {
   width: 258px;
   height: 2.85rem;
   border-radius: 0.5rem;
@@ -83,7 +85,7 @@
   outline: none;
   padding-left: 1rem;
 }
-.shortenlink-wrapper .shortenlink-container .shortenlink-actual input:focus-visible {
+.shortenlink-wrapper .shortenlink-container .shortenlink-actual .shortenlink-form .form-wrapper input:focus-visible {
   border: 2px solid hsl(180, 66%, 49%);
 }
 .shortenlink-wrapper .shortened-container {
@@ -106,7 +108,12 @@
   padding-left: 1rem;
   color: hsl(257, 27%, 26%);
   font-weight: 700;
-  overflow: scroll;
+  overflow-x: hidden;
+}
+.shortenlink-wrapper .shortened-container .original-link p {
+  margin-top: 1rem;
+  height: 3rem;
+  width: 300px;
 }
 .shortenlink-wrapper .shortened-container .shortened-line {
   width: 325px;
@@ -124,7 +131,7 @@
   padding-left: 1rem;
   color: hsl(180, 66%, 49%);
   font-weight: 500;
-  overflow: scroll;
+  overflow-x: hidden;
 }
 .shortenlink-wrapper .shortened-container button {
   margin-left: 0.7rem;
@@ -143,4 +150,59 @@
   font-size: 14px;
   color: hsl(0, 87%, 67%);
   border: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  .shortenlink-container {
+    height: 150px !important;
+    width: 1100px !important;
+    background-image: url("../../images/bg-shorten-desktop.svg") !important;
+    background-repeat: no-repeat;
+    background-position: 0rem 0rem !important;
+  }
+  .shortenlink-container .shortenlink-form {
+    flex-direction: row !important;
+    align-items: flex-start !important;
+    gap: 1.5rem !important;
+  }
+  .shortenlink-container .shortenlink-form .form-wrapper input {
+    width: 760px !important;
+  }
+  .shortenlink-container .shortenlink-form .form-wrapper .error-label {
+    left: -18.3rem !important;
+  }
+  .shortenlink-container .shortenlink-form .btn-shorten {
+    height: -moz-fit-content !important;
+    height: fit-content !important;
+    width: 200px !important;
+    padding: 0.5rem 1rem !important;
+  }
+  .shortened-container {
+    flex-direction: row !important;
+    align-items: center !important;
+    width: 1100px !important;
+    height: 75px !important;
+  }
+  .shortened-container .original-link {
+    width: 600px !important;
+  }
+  .shortened-container .original-link p {
+    margin-top: 0 !important;
+    height: 20px !important;
+    width: 600px !important;
+  }
+  .shortened-container .shortened-link {
+    align-items: flex-end !important;
+    padding: 0 !important;
+    margin-right: 1rem !important;
+  }
+  .shortened-container .shortened-line {
+    display: none;
+  }
+  .shortened-container button {
+    height: 56px !important;
+    width: 150px !important;
+    padding: 0 !important;
+    margin-left: 0 !important;
+  }
 }/*# sourceMappingURL=ShortenLink.css.map */

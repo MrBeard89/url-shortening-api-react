@@ -4,6 +4,8 @@
 .header-main {
   @extend %flex-column;
   height: 100vh;
+  margin-bottom: 3rem !important;
+  z-index: 3;
 
   .header-text {
     @extend %ai-center-column;
@@ -39,6 +41,45 @@
     .header-img {
       width: 375px;
       height: 350px;
+    }
+  }
+}
+
+//Media Queries
+
+@media only screen and (min-width: 1440px) {
+  .header-main {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    .header-text {
+      justify-content: center;
+      align-items: flex-start;
+      width: fit-content;
+      text-align: left;
+      margin-left: 12.5vw;
+
+      h1 {
+        font-size: 70px;
+        width: 600px;
+        line-height: 4.5rem;
+      }
+
+      p {
+        width: 500px;
+      }
+    }
+    .header-img-container {
+      width: 50vw;
+      background-image: url(../../images/illustration-working.svg) !important;
+      background-size: 50vw;
+      background-repeat: no-repeat;
+      background-position-y: center;
+      background-position-x: 1rem;
+
+      .header-img {
+        display: none;
+      }
     }
   }
 }

@@ -3,6 +3,7 @@
 
 .cards-container {
   @extend %full-center-column;
+
   width: v.$max-width;
   z-index: 3;
 
@@ -25,49 +26,140 @@
     }
   }
 
-  .card-component {
-    //Card image brand
-    z-index: 3;
-    &:nth-child(2) {
-      @extend %card-img-brand;
-      @extend %between-card-line;
+  //Cards
+
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    .card-component {
+      //Card image brand
+      z-index: 4;
+      &:nth-child(1) {
+        @extend %card-img-brand;
+        &:after {
+          z-index: 1;
+          position: absolute;
+          bottom: -3rem;
+          content: '';
+          width: 0.5rem;
+          height: 3rem;
+          background-color: v.$cyan;
+        }
+      }
+
+      //Card image records
+
+      &:nth-child(2) {
+        @extend %card-img-records;
+        &:after {
+          z-index: 1;
+          position: absolute;
+          bottom: -3rem;
+          content: '';
+          width: 0.5rem;
+          height: 3rem;
+          background-color: v.$cyan;
+        }
+      }
+
+      //Card image custom
+
+      &:nth-child(3) {
+        @extend %card-img-custom;
+      }
+
+      position: relative;
+      @extend %full-center-column;
+      z-index: 3;
+      text-align: center;
+      width: v.$content-width-mobile;
+      height: 260px;
+      background-color: v.$soft-white;
+      border-radius: 0.6rem;
+      margin-bottom: 5rem;
+
+      .card-title {
+        width: v.$staticstext-width-mobile;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 22px;
+      }
+
+      .card-text {
+        width: v.$staticstext-width-mobile;
+        color: v.$grayish-violet;
+        font-size: 17px;
+        line-height: 1.4rem;
+      }
     }
+  }
+}
 
-    //Card image records
+//Media Queries
 
-    &:nth-child(3) {
-      @extend %card-img-records;
-      @extend %between-card-line;
+@media only screen and (min-width: 1440px) {
+  .cards-container {
+    .main-text {
+      width: 500px !important;
+      margin-bottom: 3.5rem;
     }
+  }
+  .card-wrapper {
+    flex-direction: row !important;
+    gap: 2rem;
 
-    //Card image custom
+    .card-component {
+      text-align: left !important;
+      padding-left: 1rem !important;
+      &:is(:nth-child(1), :nth-child(2)) {
+        &::after {
+          content: none !important;
+        }
+      }
 
-    &:nth-child(4) {
-      @extend %card-img-custom;
-    }
+      //Aligning Div Component images
 
-    position: relative;
-    @extend %full-center-column;
-    z-index: 3;
-    text-align: center;
-    width: v.$content-width-mobile;
-    height: 260px;
-    background-color: v.$soft-white;
-    border-radius: 0.6rem;
-    margin-bottom: 5rem;
+      &:is(:nth-child(1), :nth-child(2), :nth-child(3)) {
+        &::before {
+          left: 2rem;
+        }
+      }
 
-    .card-title {
-      width: v.$staticstext-width-mobile;
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      font-size: 22px;
-    }
+      //Aligning Div Components
 
-    .card-text {
-      width: v.$staticstext-width-mobile;
-      color: v.$grayish-violet;
-      font-size: 17px;
-      line-height: 1.4rem;
+      &:nth-child(2) {
+        margin-top: 2.5rem;
+
+        //Between horizontal line
+
+        &::after {
+          position: absolute !important;
+          left: -2rem !important;
+          top: 5rem;
+          z-index: 1 !important;
+          content: '' !important;
+          width: 2rem !important;
+          height: 0.5rem !important;
+          background-color: v.$cyan !important;
+        }
+      }
+
+      &:nth-child(3) {
+        margin-top: 4.5rem;
+
+        //Between horizontal line
+
+        &::after {
+          position: absolute !important;
+          left: -2rem !important;
+          top: 3rem;
+          z-index: 1 !important;
+          content: '' !important;
+          width: 2rem !important;
+          height: 0.5rem !important;
+          background-color: v.$cyan !important;
+        }
+      }
     }
   }
 }
