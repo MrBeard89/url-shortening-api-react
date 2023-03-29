@@ -3,7 +3,7 @@
 
 .header-main {
   @extend %flex-column;
-  height: 100vh;
+  height: 700px;
   margin-bottom: 3rem !important;
   z-index: 3;
 
@@ -70,9 +70,10 @@
       }
     }
     .header-img-container {
-      width: 50vw;
+      max-width: 50vw;
       background-image: url(../../images/illustration-working.svg) !important;
-      background-size: 50vw;
+
+      background-size: (5vw * 4) * 2;
       background-repeat: no-repeat;
       background-position-y: center;
       background-position-x: 1rem;
