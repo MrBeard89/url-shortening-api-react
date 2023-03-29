@@ -2,6 +2,7 @@
   "name": "url-shortening-api-react",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mrbeard89.github.io/url-shortening-api-react/",
   "dependencies": {
     "@hookform/resolvers": "^3.0.0",
     "@testing-library/jest-dom": "^5.16.5",
